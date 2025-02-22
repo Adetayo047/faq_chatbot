@@ -1,0 +1,11 @@
+fastapi            # FastAPI for building APIs
+uvicorn            # ASGI server to run the FastAPI app
+openai==0.28             # OpenAI library to access GPT models
+langchain         # Language chain for vector operations
+chromadb            # Chroma vector store for RAG
+sentence-transformers # HuggingFace embeddings for vectorization
+torch               # PyTorch for deep learning and HuggingFace models
+transformers       # HuggingFace Transformers for model and tokenizer
+pydantic            # Data validation and serialization (FastAPI uses it internally)
+python-dotenv     # For managing environment variables (.env file)
+langchain-community

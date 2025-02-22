@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  faq_chat:
+    build: .
+    image: faq_chat
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./USERS/KOGI_USERS:/faq_chat/USERS/KOGI_USERS
+      - ./USERS/OSUN_USERS:/faq_chat/USERS/OSUN_USERS
+      - ./data/KOGI_VECTOR_STORE:/faq_chat/data/KOGI_VECTOR_STORE
+      - ./data/OSUN_VECTOR_STORE:/faq_chat/data/OSUN_VECTOR_STORE
+      - ./data/kogi_hayok_data.txt:/faq_chat/data/kogi_hayok_data.txt
+      - ./data/osun_hayok_data.txt:/faq_chat/data/osun_hayok_data.txt
+    env_file:
+      - .env
+    restart: always
+
+ 
